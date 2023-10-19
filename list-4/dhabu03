@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+class largest
+{
+	public:
+		int id;
+		float spi;
+		void getdata()
+		{
+			cout<<"Enter the id  : ";
+			cin>>id;
+			cout<<"Enter the spi : ";
+			cin>>spi;	
+		}	
+		void putdata()
+		{
+			cout<<"id  is : "<<id<<endl;
+			cout<<"SPI is : "<<spi<<endl;
+		}
+};
+main()
+{
+	int i,n;
+	largest l[10];
+	cout<<"I am dushyant purohit"<<endl;
+	cout<<"En_no    220130318028 "<<endl;
+	cout<<"---------------------"<<endl;
+	cout<<"Enter the size of array : ";
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		l[i].getdata();
+	}
+	for(i=0;i<n;i++)
+	{
+		if(l[0].spi < l[i].spi)
+		{
+			l[0].spi = l[i].spi;
+		}
+	}
+	cout<<"id is :   " <<l[0].id<<"    highest : "<<l[0].spi<<endl;
+	for(i=0;i<n;i++)
+	{
+		l[i].putdata();
+		cout<<endl;
+	}
+	return 0;
+}
